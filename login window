@@ -1,0 +1,19 @@
+#################################
+#       LOGIN window            #
+#################################
+windowl = Window(app, title = "LOGIN", height=300, width=200)
+text_blank = Text(windowl, text=" ")
+text_blank = Text(windowl, text=" Welcome to login ") 
+text_blank = Text(windowl, text=" ")
+text = Text(windowl, text= "enter user name")
+userL_textbox = TextBox(windowl)
+text_blank = Text(windowl, text=" ")
+text = Text(windowl, text= "enter user Password")
+PWL_textbox = TextBox(windowl)
+#
+text_blank = Text(windowl, text=" ")
+text_blank = Text(windowl, text=" ")
+open_button = PushButton(windowl, text="log in", command=login_user) # button on app, main window
+app.bg = "light grey"
+text_blank = Text(app, text=" ")
+windowl.hide()
