@@ -1,0 +1,22 @@
+#
+#
+#
+#################################
+#       main window             #
+#################################
+app = App(title = "MAIN", height = 600)
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" Welcome to login ")
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" ")
+open_button = PushButton(app, text="log in", command=open_login) # login button on app, main window
+text_blank = Text(app, text=" ")
+open_button = PushButton(app, text="sign up", command=open_signup) # signup button on app, main window
+text_blank = Text(app, text=" ") #adds spaces to the buttons#
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" ")
+text_blank = Text(app, text=" ")
+open_button = PushButton(app, text="suprise", command=open_suprise) # button on app, main window
+app.bg = "light grey" #changes the background colour#
+text_blank = Text(app, text=" ")
