@@ -1,0 +1,49 @@
+
+#################################
+#            signup             #
+#################################
+windowsuprise = Window(app, title = "SUPRISE", height=400, width=300)
+picture = Picture(windowsuprise, image = "bucket.PNG", height=400, width=300)
+windowsuprise.hide()
+
+
+windows = Window(app, title = "SIGNUP", height=400, width=300)
+text_blank = Text(windows, text=" ")
+text_blank = Text(windows, text=" Welcome to sign up ")
+text_blank = Text(windows, text=" ")
+text = Text(windows, text= "enter your username")
+UN_textbox = TextBox(windows)
+text = Text(windows, text= "enter your Password")
+PW_textbox = TextBox(windows)
+text = Text(windows, text= "enter your firstname")
+userf_textbox = TextBox(windows)
+text = Text(windows, text= "enter your surename")
+users_textbox = TextBox(windows)
+text = Text(windows, text= "enter your email")
+EM_textbox = TextBox(windows)
+text = Text(windows, text= "enter your date of birth")
+DoB_textbox = TextBox(windows)
+text_blank = Text(windows, text=" ")
+open_button = PushButton(windows, text="sign up", command=signup_user)
+
+windows.hide()
+
+
+##########################
+##        review        ##
+##########################
+windowr = App(title = "REVIEW")
+
+file_controls = Box(windowr, align = "top", width = "fill")
+text = Text(windowr, text= "enter a review")
+save_buton = PushButton(file_controls, text = "save", align = "right", command = save_review)
+combotopic = Combo(windowr, options=["halo", "mario", "pacman", "lugi"])
+#open_button = PushButton(file_controls, text = "Open", align = "right", command = open_file)
+reveiw_textbox = TextBox(windowr, multiline = True, height = 20, width = 45)
+windowr.hide()
+
+
+#
+#
+#
+app.display()
