@@ -1,0 +1,27 @@
+####signing up new users####
+def signup_user():
+	if UN_textbox.value == "":
+		info("Error", "You must enter a username") #must enter username#
+	elif len(UN_textbox.value) <= 3:
+		info("Error", "You must enter a username longer than 3 characters") #must enter a longer username#
+	elif len(UN_textbox.value) >= 12:
+		info("Error", "You must enter a username shorter than 12 characters") #must enter a shorter username to not crash system#
+	elif PW_textbox.value == "":
+		info("Error", "You must enter a password") #must enter password#
+	elif len(PW_textbox.value) <= 3:
+		info("Error", "You must enter a password longer than 3 characters") #must enter a longer password for security#
+	elif len(PW_textbox.value) >= 16:
+		info("Error", "You must enter a password shorter than 16 characters") #must enter a shorter password to not crash system#
+	elif userf_textbox.value == "":
+		info("Error", "You must enter your first name") #must enter name#
+	elif users_textbox.value == "":
+		info("Error", "You must enter your surename") #must enter name#
+	elif EM_textbox.value == "":
+		info("Error", "You must enter an Email") #must enter email#
+	elif EM_textbox.value != "@":
+		info("Error", "You must enter a valid Email") #must have @ in email#
+	else:
+		mysqlInsert = "INSERT INTO Cust_Table(CustUN, CustPassword, CustFirstname, CustSurename, DoB, EmailAddress) VALUES ('"+ str(UN_textbox.value) + "','" + str(PW_textbox.value) + "','" + str(userf_textbox.value) + "','" + str(users_textbox.value) + "','" + str(EM_textbox.value) + "','" + str(DoB_textbox.value)+ "')"
+		print(mysqlInsert) #prints to see if its working#
+		execute_sql(database_file, mysqlInsert) #puts new user into system#
+		info("signed up", "you are now signed up")
