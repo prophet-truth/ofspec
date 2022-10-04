@@ -1,0 +1,28 @@
+####open login window####
+def open_login():
+    windowl.show()
+
+
+####open signup window####
+def open_signup():
+    windows.show()
+
+
+####open surprise window####
+def open_suprise():
+    windowsuprise.show()
+
+####open review window####
+def open_review():
+	windowr.show()
+####exits app####
+def exit_app():
+    windowr.destroy()
+
+####saves review in database####
+def save_review():
+	reviewsql = "INSERT INTO Review_Table(ReviewWriteUp, ReviewDate, ReviewTopic, CustID) VALUES ('"+ str(reveiw_textbox.value) + "','" + str(formatted_now) + "','" + str(combotopic.value) + "','" + str(login) + "')"
+	print(reviewsql)
+	execute_sql(database_file, reviewsql)
+	info("signed up", "the review have been saved")
+#
