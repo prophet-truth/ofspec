@@ -1,6 +1,6 @@
 #
 ####login to app using sql####
-def login_user():  #### TEST WITH 'or 1 = 1; -- 
+def login_user(): 
 	if userL_textbox.value == "":
 		info("Error", "You must enter a valid username")
 	elif PWL_textbox.value == "":
