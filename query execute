@@ -2,11 +2,11 @@
 #Global variables here
 #
 #
-database_file = 'UserApp.db'
+database_file = 'booking.db'
 #
 #
 #
-#Delete the database, only if it exists
+#Delete the database
 #
 #
 if os.path.exists(database_file):
@@ -22,11 +22,8 @@ cursor.executescript(sql) # creates from DDL above, script more than 1 command
 conn.commit()
 #Close the connection to the database
 #
-#Queries the database using the database parameter as the database
-#to query and the query parameter as the actual query to issue
-# for SELECT
 #
-def query_database(database, query):
+def query_database(database, query): # read the database
 	Lconn = sqlite3.connect(database)
 	cur = Lconn.cursor()			# use a local cursor
 	cur.execute(query)
@@ -35,9 +32,7 @@ def query_database(database, query):
 	return rows
 #
 #
-#Executes the sql statement to INSERT and UPDATE rows
-#
-def execute_sql(database, sql_statement):
+def execute_sql(database, sql_statement): # INSERT and UPDATE the database
 	Lconn = sqlite3.connect(database)
 	cur = Lconn.cursor()
 	cur.execute(sql_statement)
